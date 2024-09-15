@@ -27,12 +27,20 @@
 # print(result)
 
 ## exercise 3
-with open("file1.txt") as file1:
-    content = file1.readlines()
+# with open("file1.txt") as file1:
+#     content = file1.readlines()
 
-with open("file2.txt") as file2:
-    lines = file2.readlines()
-int_list = [int(num) for num in content]
-stuff = [int(same) for same in lines]
-result = [match for match in int_list if match in stuff]
-print(result)
+# with open("file2.txt") as file2:
+#     lines = file2.readlines()
+# int_list = [int(num) for num in content]
+# stuff = [int(same) for same in lines]
+# result = [match for match in int_list if match in stuff]
+# print(result)
+
+import random as rd
+names = ['Alex', 'Beth', 'Caroline', 'Dave', 'Eleanor', 'Freddie']
+students_scores = {student:rd.randint(0,15) for student in names}
+passed_students = {student for (student, score) in students_scores.items()  if score > 10 }
+
+print(students_scores)
+print(passed_students)
