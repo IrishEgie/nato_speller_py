@@ -26,13 +26,12 @@
 import pandas as pd
 
 nato_read = pd.read_csv("nato_phonetic_alphabet.csv")
-
 nato_df = pd.DataFrame(nato_read)
-nato_dict = { row["letter"]:row["code"] for (index, row) in nato_df.iterrows()}
-print(nato_dict)
+nato_dict = {row["letter"]:row["code"] for (index, row) in nato_df.iterrows()}
+# print(nato_dict)
 
 #TODO 2. Create a list of the phonetic code words from a word that the user inputs.
-
-
-
-
+word_input = input("Input a word to convert to NATO phonetic format: ").upper()
+nato_equivalent = [nato_dict[f"{letter}"] for letter in word_input if letter in nato_dict.keys() ]
+        
+print(nato_equivalent)
