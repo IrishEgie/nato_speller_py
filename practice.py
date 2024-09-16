@@ -37,10 +37,25 @@
 # result = [match for match in int_list if match in stuff]
 # print(result)
 
-import random as rd
-names = ['Alex', 'Beth', 'Caroline', 'Dave', 'Eleanor', 'Freddie']
-students_scores = {student:rd.randint(0,15) for student in names}
-passed_students = {student for (student, score) in students_scores.items()  if score > 10 }
+## exercise 4
+# import random as rd
+# names = ['Alex', 'Beth', 'Caroline', 'Dave', 'Eleanor', 'Freddie']
+# students_scores = {student:rd.randint(0,15) for student in names}
+# passed_students = {student for (student, score) in students_scores.items()  if score > 10 }
 
-print(students_scores)
-print(passed_students)
+# print(students_scores)
+# print(passed_students)
+
+##exercise 5
+# sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
+# words = sentence.split()
+
+# result = { letters: len(letters) for letters in words}
+# print(result)
+
+# #exerise 6 
+# weather_c = {"Monday": 12, "Tuesday": 14, "Wednesday": 15, "Thursday": 14, "Friday": 21, "Saturday": 22, "Sunday": 24}
+
+# weather_f = { day:(c * 9/5) + 32 for(day, c) in weather_c.items()}
+
+# print(weather_f)
