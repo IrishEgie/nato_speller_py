@@ -31,7 +31,16 @@ nato_dict = {row["letter"]:row["code"] for (index, row) in nato_df.iterrows()}
 # print(nato_dict)
 
 #TODO 2. Create a list of the phonetic code words from a word that the user inputs.
-word_input = input("Input a word to convert to NATO phonetic format: ").upper()
-nato_equivalent = [nato_dict[f"{letter}"] for letter in word_input if letter in nato_dict.keys() ]
-        
-print(nato_equivalent)
+def generate_nato_equi():
+    word_input = input("Input a word to convert to NATO phonetic format: ").upper()
+
+    try:
+        nato_equivalent = [nato_dict[f"{letter}"] for letter in word_input]
+    except KeyError:
+        print("Sorry, only letters in the alphabet only.")
+        generate_nato_equi()
+    else:    
+        print(nato_equivalent)
+
+
+generate_nato_equi()
